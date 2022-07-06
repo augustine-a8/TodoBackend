@@ -17,6 +17,7 @@ async function startServer(typeDefs, resolvers) {
     typeDefs,
     resolvers,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
+    persistedQueries: false,
   });
 
   await server.start();
